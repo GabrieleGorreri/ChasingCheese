@@ -1,7 +1,7 @@
 # 🧀 Chasing Cheese 
 
 ## Introduction
-A quick introduction, with use case, to Reinforcement Learning (Q-learn), used to solve the most classic problem for a mouse...find the cheese in the shortest way. 
+A quick introduction, with use cases, to Reinforcement Learning (Q-learn), used to solve the most classic problem for a mouse... find the cheese in the shortest path.
 
 ##  📄 About the Q-learn & Bellman function
 The Q-learn is one of the most famous reinforcement leraning algorithm. It's considered as a "model-free" algorithm, that means it does not require a model of the environment (hence "model-free"), and it can handle problems with stochastic transitions and rewards without requiring adaptations. In practice means that it will follow a probability matrix to describe the multiple situations (status). Q-learning finds an optimal policy in the sense of maximizing the expected value of the total reward over any and all successive steps, starting from the current state. 
@@ -33,8 +33,22 @@ Q^{new}(S_t, A_t) \leftarrow (1-\underbrace{\alpha}_{\text{learning rate}}) \cdo
 1) _Learning rate_: it determines the extent to which newly acquired information will overwrite old information. A factor of 0 would prevent the agent from learning, while a factor of 1 would cause the agent to only care about recent information.
 2) _Discount factor_: it determines the importance of future rewards. A factor of 0 will make the agent "opportunistic" and cause it to consider only current rewards, while a factor tending to 1 will make the agent also attentive to the rewards that it will receive in the long-term future.
 
-## 🏅 Labyrinth and Reward 
-We will first start using a simple labyrinth with 10 possible positions (from 1 to 10). 
+## 🏅 Labyrinth, Tasks and Reward
+
+#### Task 1
+We will first start using a simple labyrinth with 10 possible positions (from 1 to 10):
+
+<img src="https://github.com/GabrieleGorreri/ChasingCheese/raw/main/images/labyrinth_1.png" width="800"/>
+
+#### Task 2
+Then we will use a more tricky one, with 16 positions (a 4x4 labyrinth): 
+
+<img src="https://github.com/GabrieleGorreri/ChasingCheese/raw/main/images/labyrinth_2.png" width="400"/>
+
+#### Task 3
+Finally, we assume that we have a Quality Matrices Matrix (a vector of Quality Matrices), in order to have a training program that can locate the best path for all possible positions of the cheese. We use a 16x16x16 Quality Matrix, with some custom settings on the direction that our mouse (aka agent) can follow:
+
+<img src="https://github.com/GabrieleGorreri/ChasingCheese/raw/main/images/labyrinth_3.png" width="400"/>
 
 
 ### Tools
@@ -42,8 +56,7 @@ We will first start using a simple labyrinth with 10 possible positions (from 1 
 
 
 ##  🔧 Tasks
-
-Find out some insights from different datasets.
+The little mouse must find the cheese in the shortest possible path.
 
 
 
